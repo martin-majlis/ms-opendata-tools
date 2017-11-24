@@ -36,6 +36,8 @@ def loadData(fName):
         for k, v in row.items():
             if k == DEV_KEY:
                 continue
+            if k is None:
+                continue
             k = re.sub(r' \[.*', '', k).strip().replace(' ', '_')
             proc[DEV_ID + "-" + k] = v
 

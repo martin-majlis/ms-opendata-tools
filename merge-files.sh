@@ -19,7 +19,7 @@ function process() {
 }
 
 suffix=$1
-if x${suffix} != x${SUFFIX1} -o x${suffix} != x${SUFFIX2}; then
+if [ x${suffix} != x${SUFFIX1} -a x${suffix} != x${SUFFIX2} ]; then
 	echo "Musi se specifikovat suffix. Bud '${SUFFIX1}' nebo '${SUFFIX2}'";
 	exit 1
 fi;
